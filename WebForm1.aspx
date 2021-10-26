@@ -40,14 +40,18 @@
                 <tr>
                     <td>Last Name:</td>
                     <td>
-                        <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox></td>
+                        <asp:TextBox ID="txtLastName" runat="server"></asp:TextBox>
+                        <ajaxToolkit:DropShadowExtender ID="txtLastName_DropShadowExtender" runat="server" BehaviorID="txtLastName_DropShadowExtender" TargetControlID="txtLastName" />
+                    </td>
                 </tr>
                 <tr>
                     <td>Date of Birth:</td>
                     <td>
-                        <asp:DropDownList ID="ddlDates" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlDates_SelectedIndexChanged"></asp:DropDownList>
+                        <%--<asp:DropDownList ID="ddlDates" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddlDates_SelectedIndexChanged"></asp:DropDownList>
                         <asp:DropDownList ID="ddlMonths" runat="server" AutoPostBack="true" OnSelectedIndexChanged="ddlMonths_SelectedIndexChanged"></asp:DropDownList>
-                        <asp:DropDownList ID="ddlYears" runat="server"></asp:DropDownList>
+                        <asp:DropDownList ID="ddlYears" runat="server"></asp:DropDownList>--%>
+                        <asp:TextBox ID="txtDOB" runat="server"></asp:TextBox>
+                        <ajaxToolkit:CalendarExtender ID="txtDOB_CalendarExtender" runat="server" BehaviorID="txtDOB_CalendarExtender" TargetControlID="txtDOB" />
                 </tr>
                 <tr>
                     <td>Email or Phone:</td>
