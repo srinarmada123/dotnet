@@ -1,3 +1,5 @@
+sql queries
+
 create database project_sm
 
 use project_sm
