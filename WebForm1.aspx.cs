@@ -65,6 +65,7 @@ namespace project_social_media
             //}
         }
         EL el = new EL();
+        BL b = new BL();
         protected void cmdbutton_Click(object sender, EventArgs e)
         {
             if (Literal1.Text == txtCaptch.Text)
@@ -72,8 +73,12 @@ namespace project_social_media
                 el.FIRSTNAME = txtFirstName.Text;
                 el.LASTNAME = txtLastName.Text;
                 el.EMAILORPHONE = txtEmailPhone.Text;
-                el.DOB = Convert.ToDateTime(txtDOB.Text);
-                Response.Redirect("Registration.aspx");
+                el.DOB =txtDOB.Text;
+                el.PASSWORD = txtpassword.Text;
+                //Server.Transfer("Registration.aspx");
+                // int j=Convert.ToInt32(Request.QueryString["nor"].ToString());
+                int j=b.insert(el);
+                ltmessage.Text = j + " Record(s) Inserted Successfully";
                 //Response.Write("<script>alert('Registered successfully')</script>");
 
             }

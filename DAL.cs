@@ -11,13 +11,13 @@ namespace project_social_media
         SqlConnection con = new SqlConnection(ConfigurationManager.AppSettings["kc"]);
         public int insert(EL el)
         {
-            string qry = "insert into register(firstname,lastname,dateofbirth,emailorphone,password) values(@fname,@lname,@dob,@mailphone,@pword)";
+            string qry = "insert into register(firstname,lastname,dateofbirth,emailorphone,password) values(@firstname,@lastname,@dateofbirth,@emailorphone,@password)";
             SqlCommand cmd = new SqlCommand(qry,con);
-            cmd.Parameters.AddWithValue("@fname",el.FIRSTNAME);
-            cmd.Parameters.AddWithValue("@lname", el.LASTNAME);
-            cmd.Parameters.AddWithValue("@dob",el.DOB);
-            cmd.Parameters.AddWithValue("@mailphone", el.EMAILORPHONE);
-            cmd.Parameters.AddWithValue("@pword", el.PASSWORD);
+            cmd.Parameters.AddWithValue("@firstname",el.FIRSTNAME);
+            cmd.Parameters.AddWithValue("@lastname", el.LASTNAME);
+            cmd.Parameters.AddWithValue("@dateofbirth",el.DOB);
+            cmd.Parameters.AddWithValue("@emailorphone", el.EMAILORPHONE);
+            cmd.Parameters.AddWithValue("@password", el.PASSWORD);
             con.Open();
             int i = cmd.ExecuteNonQuery();
             con.Close();

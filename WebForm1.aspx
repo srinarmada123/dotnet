@@ -66,9 +66,27 @@
                     </td>
                 </tr>
                 <tr>
+                    <td>Pass Word:</td>
+                    <td>
+                        <asp:TextBox ID="txtpassword" TextMode="Password" runat="server"></asp:TextBox>
+                        <ajaxToolkit:PasswordStrength ID="txtpassword_PasswordStrength" runat="server" BehaviorID="txtpassword_PasswordStrength" TargetControlID="txtpassword" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Confirm Pass Word:</td>
+                    <td>
+                        <asp:TextBox ID="txtcpassword" TextMode="Password" runat="server"></asp:TextBox>
+                    </td>
+                </tr>                
+                <tr>
                     <td></td>
                     <td>
-                        <asp:Button ID="cmdbutton" runat="server" Text="Register" OnClick="cmdbutton_Click" /></td>
+                        <asp:Button ID="cmdbutton" runat="server" Text="Register" OnClick="cmdbutton_Click" style="height: 26px" /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:Literal ID="ltmessage" runat="server"></asp:Literal>
+                    </td>
                 </tr>
             </table>
         </div>

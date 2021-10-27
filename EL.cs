@@ -8,8 +8,7 @@ namespace project_social_media
     public class EL
     {
         int id;
-        string firstname, lastname,emailorphone,password;
-        DateTime dob;
+        string firstname, lastname,emailorphone,password,dob;
         byte isactive;
         public int ID
         {
@@ -62,7 +61,7 @@ namespace project_social_media
                 password = value;
             }
         }
-        public DateTime DOB
+        public string DOB
         {
             get
             {
