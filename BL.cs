@@ -12,5 +12,9 @@ namespace project_social_media
         {
             return d.insert(el);
         }
+       public int signin(EL el)
+        {
+            return d.signin(el);
+        }
     }
 }

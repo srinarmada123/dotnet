@@ -23,5 +23,16 @@ namespace project_social_media
             con.Close();
             return i;
         }
+        public int signin(EL el)
+        {
+            string qry = "select count(*) from register where emailorphone=@emailorphone and password=@password";
+            SqlCommand cmd = new SqlCommand(qry, con);
+            cmd.Parameters.AddWithValue("@emailorphone", el.EMAILORPHONE);
+            cmd.Parameters.AddWithValue("@password", el.PASSWORD);
+            con.Open();
+            int i =(int)cmd.ExecuteScalar();
+            con.Close();
+            return i;
+        }
     }
 }
