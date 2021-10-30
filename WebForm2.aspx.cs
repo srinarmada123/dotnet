@@ -13,5 +13,11 @@ namespace project_social_media
         {
 
         }
+        BL b = new BL();
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+           gvEmployeeDetails.DataSource=b.retrieve();
+            gvEmployeeDetails.DataBind();
+        }
     }
 }
